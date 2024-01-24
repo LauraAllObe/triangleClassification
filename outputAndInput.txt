@@ -1,0 +1,34 @@
+INPUT:
+    Case 1 (is right and scalene): "is scalene and is a right triangle", classify_triangle(3,4,5)
+    Case 2 (is right and isosceles): "is isosceles and is a right triangle", classify_triangle(math.sqrt(2),1,1)
+    Case 3 (is equilateral): "is equilateral", classify_triangle(3,3,3)
+    Case 4 (is isosceles and not right):"is isosceles", classify_triangle(3,3,2)
+    Case 5 (is scalene and not right):"is scalene", classify_triangle(3,2,1)
+
+OUTPUT:
+  test_isEquilateral (__main__.TriangleTesting.test_isEquilateral) ... ok
+  test_isIsosceles (__main__.TriangleTesting.test_isIsosceles) ... ok
+  test_isRightIsosceles (__main__.TriangleTesting.test_isRightIsosceles) ... FAIL
+  test_isRightScalene (__main__.TriangleTesting.test_isRightScalene) ... FAIL
+  test_isScalene (__main__.TriangleTesting.test_isScalene) ... ok
+
+  ======================================================================
+  FAIL: test_isRightIsosceles (__main__.TriangleTesting.test_isRightIsosceles)
+  ----------------------------------------------------------------------
+  Traceback (most recent call last):
+    File "C:\Users\laura\Desktop\Uni\SSW567\triangleTesting\triangleTesting.py", line 38, in test_isRightIsosceles
+      self.assertIs("is isosceles and is a right triangle", classify_triangle(math.sqrt(2),1,1))
+  AssertionError: 'is isosceles and is a right triangle' is not 'is isosceles'
+
+  ======================================================================
+  FAIL: test_isRightScalene (__main__.TriangleTesting.test_isRightScalene)
+  ----------------------------------------------------------------------
+  Traceback (most recent call last):
+    File "C:\Users\laura\Desktop\Uni\SSW567\triangleTesting\triangleTesting.py", line 35, in test_isRightScalene
+      self.assertIs("is scalene and is a right triangle", classify_triangle(3,4,5))
+  AssertionError: 'is scalene and is a right triangle' is not 'is scalene'
+
+  ----------------------------------------------------------------------
+  Ran 5 tests in 0.002s
+
+  FAILED (failures=2)
