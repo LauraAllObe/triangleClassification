@@ -31,8 +31,11 @@ def classify_triangle(a,b,c):
         return " and is a right triangle"
     
 class TriangleTesting(unittest.TestCase):
-    def test_isRight(self):
+    def test_isRightScalene(self):
         self.assertIs("is scalene and is a right triangle", classify_triangle(3,4,5))
+    
+    def test_isRightIsosceles(self):
+        self.assertIs("is isosceles and is a right triangle", classify_triangle(math.sqrt(2),1,1))
     
     def test_isEquilateral(self):
         self.assertIs("is equilateral", classify_triangle(3,3,3))
